@@ -1,0 +1,92 @@
+@media only screen and (min-width: 1300px) {
+
+
+	body {
+		margin: 0%;
+		padding: 0%;
+		box-sizing: border-box;
+		font-family: "Montserrat", sans-serif;
+	}
+
+
+	.menu-bar {
+		display: flex;
+		width: 85%;
+		padding: auto;
+		margin: auto;
+	}
+
+	#logo-div {
+		width: 20%;
+		height: 50px;
+	}
+
+	.logo {
+		height: 70px;
+		width: 135px;
+		position: relative;
+		top: -45%;
+	}
+
+
+	.menu-bar-content {
+		float: left;
+		margin: 12px;
+		margin-top: 20px;
+		padding-top: 25px;
+		font-size: 15px;
+		width: fit-content;
+	}
+
+	.wintergaze {
+		text-align: center;
+	}
+
+	.storelocator {
+		text-align: center;
+	}
+
+	.menu-bar-content a {
+		text-decoration: none;
+		color: black;
+	}
+
+		.menu-bar-content a:hover {
+			color: #41C4CC;
+		}
+
+	.signin {
+		height: fit-content;
+		position: relative;
+		top: 20px;
+		padding-top: 5px;
+		padding-bottom: 4px;
+		padding-right: 1%;
+		width: 105px;
+		border-right: 2px black solid;
+		margin-left: 2%;
+		text-align: right;
+	}
+
+	.heart {
+		height: 25px;
+		width: 30px;
+		position: relative;
+		top: -5px;
+		margin-right: -10px;
+	}
+
+	.cart {
+		height: 30px;
+		width: 32px;
+		position: relative;
+		top: -7px;
+		margin-right: -10px;
+	}
+
+	.magnifying-glass {
+		height: 36px;
+		width: 32px;
+		position: relative;
+		top: -9px;
+	}

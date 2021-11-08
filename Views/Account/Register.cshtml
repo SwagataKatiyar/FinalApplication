@@ -1,0 +1,92 @@
+﻿@model FinalApplication.Models.RegisterViewModel
+
+@{
+    Layout = null;
+}
+<head>
+
+    <title>Registration Form</title>
+ @{
+      ViewData["Title"] = "Register Form";
+ }
+
+    <link href="@Url.Content("~/css/register.css")" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <hr />
+
+    <div class="container">
+        <div class="title">Register</div>
+        <div class="content">
+
+            <form asp-action="Register" asp-controller="Account">
+
+                <div class="user-details">
+                    <div class="input-box">
+
+                        <label asp-for="UserId" class="control-label"></label>
+                        <input asp-for="UserId" class="form-control" />
+                        <span asp-validation-for="UserId" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        <label asp-for="Username" class="control-label"></label>
+                        <input asp-for="Username" class="form-control" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        <label asp-for="loginId" class="control-label"></label>
+                        <input asp-for="loginId" class="form-control" />
+                        <span asp-validation-for="loginId" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        <label asp-for="DOB" class="control-label"></label>
+                        <input asp-for="DOB" class="form-control" />
+                        <span asp-validation-for="DOB" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        <label asp-for="Pwd" class="control-label"></label>
+                        <input asp-for="Pwd" class="form-control" />
+                        <span asp-validation-for="Pwd" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        <label asp-for="ConfirmPwd" class="control-label"></label>
+                        <input asp-for="ConfirmPwd" class="form-control" />
+                        <span asp-validation-for="ConfirmPwd" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="gender-details">
+                    <input type="radio" id="dot-1" asp-for="Gender" name="gender" value="M" />
+                    <input type="radio" id="dot-2" asp-for="Gender" name="gender" value="F" />
+                    <input type="radio" id="dot-3" asp-for="Gender" name="gender" value="NA" />
+
+                    <div class="category">
+                        <label asp-for="Gender" for="dot-1">
+                            <span asp-for="Gender" class="dot one"></span>
+                            <span asp-for="Gender" class="gender">Male</span>
+                        </label>
+                        <label asp-for="Gender" for="dot-2">
+                            <span asp-for="Gender" class="dot two"></span>
+                            <span asp-for="Gender" class="gender">Female</span>
+                        </label>
+                        <label asp-for="Gender" for="dot-3">
+                            <span asp-for="Gender" class="dot three"></span>
+                            <span asp-for="Gender" class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+                    <div class="button">
+                        <input type="submit" value="Register" />
+                    </div>
+</form>
+        </div>
+    </div>
+</body>
+

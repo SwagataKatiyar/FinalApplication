@@ -1,0 +1,64 @@
+﻿@model FinalApplication.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+@{
+    Layout = null;
+}
+
+<head>
+    <link href="@Url.Content("~/css/Login.css")" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <div class="title">Login</div>
+        <div class="content">
+            <form asp-action="Login" id="form" asp-controller="Account">
+                <div class="user-details">
+                    <div class="input-box">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="UserId" class="control-label"></label>
+                            <input asp-for="UserId" class="form-control" />
+                            <span asp-validation-for="UserId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Pwd" class="control-label"></label>
+                            <input asp-for="Pwd" class="form-control" />
+                            <span asp-validation-for="Pwd" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                        </div>
+                        <a class="pass" href="~/Account/ForgotPassword">Forgot password?</a>
+
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Login" />
+
+                </div>
+
+
+            </form>
+            <a class="Create" href="~/Account/Register">Don't have an account? Click Here</a>
+        </div>
+    </div>
+
+</body>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+

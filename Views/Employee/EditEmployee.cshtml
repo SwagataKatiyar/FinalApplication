@@ -1,0 +1,236 @@
+﻿@model FinalApplication.Models.EmployeeModel
+@{
+    ViewData["Title"] = "EditEmployee";
+
+}
+
+
+<head>
+
+    <meta charset="UTF-8">
+ 
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <link href="~/css/Forms.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="card card-6">
+        <div class="card-heading">
+            <h6 class="title">Edit Employee</h6>
+        </div>
+        <div class="card-body">
+
+
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-row">
+                    <div class="name">Title</div>
+                    <div class="value">
+
+                        @Html.DropDownListFor(a => a.Title, new List<SelectListItem>
+                           { new SelectListItem{Text="Mr.", Value="Mr."},new SelectListItem{Text="Ms.", Value="Ms."},
+                            new SelectListItem{Text="Mrs.", Value="Mrs."},new SelectListItem{Text="Miss", Value="Miss"}, new SelectListItem{Text="Dr.", Value="Dr."}}, "Please select", new { @class = "drop-down" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.Title)
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="name">Full name</div>
+                    <div class="value">
+                        @Html.TextBoxFor(a => a.FullName, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.FullName)
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="name">Phone Number</div>
+                    <div class="value">
+
+                        @Html.TextBoxFor(a => a.PhoneNumber, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.PhoneNumber)
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="name"> Address</div>
+                    <div class="value">
+
+                        @Html.TextBoxFor(a => a.Address, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.Address)
+                        </span>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-row">
+                    <div class="name">City</div>
+                    <div class="value">
+                        @Html.TextBoxFor(a => a.City, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.City)
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="form-row">
+                    <div class="name">State</div>
+                    <div class="value">
+                        @Html.TextBoxFor(a => a.State, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.State)
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+                    <div class="name">Postal</div>
+                    <div class="value">
+                        @Html.TextBoxFor(a => a.Postal, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.Postal)
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="name">Country</div>
+                    <div class="value">
+                        @Html.TextBoxFor(a => a.Country, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.Country)
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="name">Email</div>
+                    <div class="value">
+                        @Html.TextBoxFor(a => a.Email, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.Email)
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="name">Job Status</div>
+                    <div class="value">
+                        @Html.DropDownListFor(a => a.Status, new List<SelectListItem>
+                         { new SelectListItem{Text="Intern", Value="Intern"},new SelectListItem{Text="Trainee", Value="Trainee"},
+                            new SelectListItem{Text="Temporary", Value="Temporary"},new SelectListItem{Text="Permanent", Value="Permanent" } }, "Please select", new { @class = "drop-down" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.Status)
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="name">Certification</div>
+                    <div class="value">
+                        @Html.TextBoxFor(a => a.Certification, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.Certification)
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+                    <div class="name">Salary</div>
+                    <div class="value">
+                        @Html.TextBoxFor(a => a.Salary, new { @class = "input--style-6" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.Salary)
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+                    <div class="name">Years of Experience</div>
+                    <div class="value">
+                        @Html.DropDownListFor(a => a.YearsOfExperience, new List<SelectListItem>
+                        { new SelectListItem{Text="Fresher", Value="Fresher"},new SelectListItem{Text="0-1", Value="0-1"}, new SelectListItem{Text="2 years", Value="2 years"},new SelectListItem{Text="3 years", Value="3 years"},new SelectListItem{Text="More than 3", Value="More than 3" }, new SelectListItem{Text="More than 5", Value="More than 5"}}, "Please select", new { @class = "drop-down" })
+                    </div>
+                    <div class="col-md-2">
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(a => a.YearsOfExperience)
+                        </span>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="name">Upload CV</div>
+                    <div class="value">
+                        <div class="input-group js-input-file">
+                            <input class="input-file" type="file" name="file_cv" id="file">
+                            <label class="label--file" for="file">Choose file</label>
+                            <span class="input-file__info">No file chosen</span>
+                        </div>
+                        <div class="label--desc">Upload your CV/Resume or any other relevant file. Max file size 50 MB</div>
+                    </div>
+                </div>
+
+
+                <div class="card-footer">
+                    <input type="submit" class="btn btn-dark" value="ADD" />
+                </div>
+
+
+            }
+        </div>
+    </div>
+
+</body>
